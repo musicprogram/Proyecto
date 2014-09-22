@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+	include PublicActivity::Model
+	tracked owner: ->(controller,model) { controller && controller.current_user}
+
 
 	def create
 		user = User.find_by_username(params[:username])

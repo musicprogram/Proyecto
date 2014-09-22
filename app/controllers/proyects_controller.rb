@@ -1,4 +1,5 @@
 class ProyectsController < ApplicationController
+  include PublicActivity::Model
   before_action :set_proyect, only: [:show, :edit, :update, :destroy]
 
   # GET /proyects

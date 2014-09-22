@@ -1,4 +1,7 @@
 class CompaniesController < ApplicationController
+  include PublicActivity::Model
+  tracked owner: ->(controller,model) { controller && controller.current_user}
+
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   # GET /companies
