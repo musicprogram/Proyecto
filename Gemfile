@@ -24,7 +24,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-#gem 'bcrypt', '~> 3.1.7'
 
 # Use Rails Html Sanitizer for HTML sanitization
 gem 'rails-html-sanitizer', '~> 1.0'
@@ -50,3 +49,4 @@ gem 'simple_form'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'nested_form'
+gem 'devise', :git => 'https://github.com/plataformatec/devise.git', :branch => 'lm-rails-4-2'
