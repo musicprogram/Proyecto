@@ -20,6 +20,8 @@
 		<li><%= link_to "Invoices", invoices_path %></li>
 		<li><%= link_to "Poyectos", proyects_path %></li>
 		<li><%= link_to "Agentes", empleados_path %></li>
+		<li><%= link_to "Dashing", dashing_path %></li>
+
 	<% if current_user %>
 		<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 	<% else%>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  mount Dashing::Engine, at: Dashing.config.engine_path
   devise_for :admins
   devise_for :users
   resources :companies do 
