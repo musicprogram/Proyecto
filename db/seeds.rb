@@ -12,3 +12,11 @@ Empleado.create! [
   {nombre_completo: 'María Hernández'},
   {nombre_completo: 'Carlos Sánchez'},
 ]
+
+#Admin.create :email => 'john@gmail.com', crypted_password: => 'topsecret'
+
+
+ #admin.each do |admin|
+ #	@admin = Admin.where(admin).first_or_create
+ #end
+ 

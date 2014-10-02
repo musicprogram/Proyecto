@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :admins
   devise_for :users
   resources :companies do 
     collection { post :import }
