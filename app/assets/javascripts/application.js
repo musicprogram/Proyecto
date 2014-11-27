@@ -17,3 +17,13 @@
 //= require_tree .
 //= require jquery_nested_form
 
+
+
+
+
+
+
+/* Carrousel bootstrap welcome*/
+	 $('.carousel').carousel({
+        interval: 3000
+    })

@@ -4,11 +4,15 @@
   <title>Proyecto</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <div class="container">
+	
+	
+
 	<ul class="nav nav-tabs">
 		
 		<li><%= link_to "Home", root_path %></li>
@@ -30,6 +34,10 @@
 	<% end%>
 
 	</ul>
+
+
+
+
 	
 	<% if flash[:notice] %>
 		<div class="alert alert-success">
@@ -57,4 +65,5 @@
 </div>
 
 </body>
+
 </html>
