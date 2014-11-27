@@ -13,10 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+
 //= require turbolinks
+
+
 //= require_tree .
 //= require jquery_nested_form
-
 
 
 
@@ -27,3 +29,13 @@
 	 $('.carousel').carousel({
         interval: 3000
     })
+	 
+
+/*wow */
+wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();

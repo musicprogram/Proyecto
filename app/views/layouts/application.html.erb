@@ -3,8 +3,9 @@
 <head>
   <title>Proyecto</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> 
+
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,7 +13,6 @@
 <div class="container">
 	
 	
-
 	<ul class="nav nav-tabs">
 		
 		<li><%= link_to "Home", root_path %></li>
@@ -26,12 +26,12 @@
 		<li><%= link_to "Agentes", empleados_path %></li>
 		<li><%= link_to "Dashing", dashing_path %></li>
 
-	<% if current_user %>
-		<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-	<% else%>
-		<li><%= link_to "Sign Up", new_user_registration_path %></li>
-		<li><%= link_to "Sign In", new_user_session_path %></li>
-	<% end%>
+			<% if current_user %>
+				<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+			<% else%>
+				<li><%= link_to "Sign Up", new_user_registration_path %></li>
+				<li><%= link_to "Sign In", new_user_session_path %></li>
+			<% end%>
 
 	</ul>
 

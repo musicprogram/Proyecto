@@ -1,2 +1,65 @@
-<h1>Welcome#features</h1>
-<p>Find me in app/views/welcome/features.html.erb</p>
+<link rel="stylesheet" href="../../assets/stylesheets/features.css.erb">
+
+</head>
+<body >
+
+<main>
+	<header>
+		<h1>jQuery Ripples</h1>
+		<h2>A simple WebGL-based ripple effect.</h2>
+	</header>
+	<p>Background images are often boring. Use this effect to make your static CSS background images more interactive!</p>
+	<p>It's as easy as:</p>
+	
+	<pre><code>
+$(<span style="color:#ec7600">'body'</span>).ripples(<span style="font-weight:bold">{</span>
+	resolution: <span style="color:#ffcd22">512</span>,
+	dropRadius: <span style="color:#ffcd22">20</span>,
+	perturbance: <span style="color:#ffcd22">0.04</span>,
+<span style="font-weight:bold">}</span>);
+	</code></pre>
+	
+	<p>Download or fork this effect at <a href="https://github.com/sirxemic/jquery.ripples/">Github</a>.</p>
+</main>
+
+<button class="disable" style="display: none">Click here if your PC can't handle this effect very well</button>
+
+<div class="error"></div>
+
+<script src="../../assets/javascripts/jqueryripples.js"></script>
+<script>
+$(document).ready(function() {
+	try {
+		$('body').ripples({
+			resolution: 512,
+			dropRadius: 20, //px
+			perturbance: 0.04,
+		});
+		$('main').ripples({
+			resolution: 128,
+			dropRadius: 10, //px
+			perturbance: 0.04,
+		});
+	}
+	catch (e) {
+		$('.error').show().text(e);
+	}
+
+	$('.disable').show().on('click', function() {
+		$('body, main').ripples('destroy');
+		$(this).hide();
+	});
+
+	// Automatic drops
+	setInterval(function() {
+		var $el = $('main');
+		var x = Math.random() * $el.outerWidth();
+		var y = Math.random() * $el.outerHeight();
+		var dropRadius = 20;
+		var strength = 0.04 + Math.random() * 0.04;
+		
+		$el.ripples('drop', x, y, dropRadius, strength);
+	}, 400);
+});
+</script>
+</script></body>
