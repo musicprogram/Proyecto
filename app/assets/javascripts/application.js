@@ -29,13 +29,5 @@
 	 $('.carousel').carousel({
         interval: 3000
     })
-	 
 
-/*wow */
-wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       100
-      }
-    );
-    wow.init();
+
