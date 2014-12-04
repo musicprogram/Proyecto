@@ -25,9 +25,12 @@
 
 
 
-/* Carrousel bootstrap welcome*/
+
+
+$( document ).ready(function() {
+ /* Carrousel bootstrap welcome*/
 	 $('.carousel').carousel({
         interval: 3000
     })
 
-
+});

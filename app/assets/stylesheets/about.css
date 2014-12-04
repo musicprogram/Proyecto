@@ -21,7 +21,7 @@ section {
 }
 
 .section--blue {
-  background-color: #3498db;
+  
 }
 
 .section--green {
@@ -38,4 +38,12 @@ section {
 
 .wow:first-child {
       visibility: hidden;
+    }
+    
+
+
+#centrar {
+
+  width: 500px; 
+  margin: 0 auto;
     }
